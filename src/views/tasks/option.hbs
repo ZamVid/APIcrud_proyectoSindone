@@ -1,30 +1,42 @@
 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-12">
         <table class="table-fixed w-full">
-            <thead>
+
+            <thead><!--
                 <tr class="bg-blue-500 text-white">
                     <th class="w-20 py-4 ...">ID</th>
                     <th class="w-1/4 py-4 ...">Titulo</th>
                     <th class="w-1/2 py-4 ...">Contenido</th>
                     <th class="w-28 py-4 ...">Acciones</th>
-                </tr>
+                </tr>-->
+                <div class="block mx-auto my-12 p-8 bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg textgray-800">
+                    <h2 class="text-center text-3xl font-bold">Crear Nuevo Post</h2>
+                    <form id="formulario" action="/tasks/create" method="POST" class="mt-4">
+                        <label for="titulo">Título:</label><br>
+                        <input type="text" id="titulo" name="titulo"><br>
+                        <label for="contenido">Contenido:</label><br>
+                        <textarea id="contenido" name="contenido"></textarea><br><br>
+                        <button type="submit" value="Publicar" id="publicar">Enviar</button>
+                    </form>
+                </div>
             </thead>
+
             <tbody>
                 {{#each registros}}
-                <tr>
-                    <td class="py-3 px-6">{{id}}</td>
-                    <td class="p-3">{{titulo}}</td>
-                    <td class="p-3 text-center">{{contenido}}</td>
-                    <td class="p-3 flex">
-                        <form action="/tasks/delete" method="POST" class="mx-2">
-                            <input type="hidden" value="{{id}}" name="id">
-                            <button class="bg-red-500 text-white px-3 py-1 rounded-sm" type="submit">
-                                <i class="fas fa-trash"></i></button>
-                        </form>
-                        <a href="/tasks/edit/{{id}}" class="bg-green-500 text-white px-3 py-1 rounded-sm">
-                            <i class="fas fa-pen"></i></a>
-                    </td>
-                </tr>
+                <div>
+                    <!--<h2 class="py-3 px-6">{{id}}</h2>-->
+                    <h2 class="p-3">{{titulo}}</h2>
+                    <p class="p-3 text-center">{{contenido}}</p>
+
+                    <form action="/tasks/delete" method="POST" class="mx-2">
+                        <input type="hidden" value="{{id}}" name="id">
+                        <button class="bg-red-500 text-white px-3 py-1 rounded-sm" type="submit">
+                            <i class="fas fa-trash"></i></button>
+                    </form>
+                    <a href="/tasks/edit/{{id}}" class="bg-green-500 text-white px-3 py-1 rounded-sm">
+                        <i class="fas fa-pen"></i></a>
+
+                </div>
                 {{/each}}
             </tbody>
         </table>

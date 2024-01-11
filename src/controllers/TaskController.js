@@ -10,7 +10,28 @@ function option(req,res){
     });
 }
 function create(req,res){
-    res.render('tasks/create');
+    res.render('tasks/option');
+}
+function historia(req,res){
+    res.render('tasks/historia');
+}
+function tienda(req,res){
+    res.render('tasks/tienda');
+}
+function contacto(req,res){
+    res.render('tasks/contacto');
+}
+function ciencia(req,res){
+    res.render('tasks/ciencia');
+}
+function autopsia(req,res){
+    res.render('tasks/autopsia');
+}
+function entierro(req,res){
+    res.render('tasks/entierro');
+}
+function reliquias(req,res){
+    res.render('tasks/reliquias');
 }
 function store(req,res){
     const data=req.body;
@@ -56,5 +77,12 @@ module.exports={
     store:store,
     destroy:destroy,
     edit:edit,
-    update:update
+    update:update,
+    historia:historia,
+    tienda:tienda,
+    contacto:contacto,
+    ciencia:ciencia,
+    autopsia:autopsia,
+    entierro:entierro,
+    reliquias:reliquias
 }

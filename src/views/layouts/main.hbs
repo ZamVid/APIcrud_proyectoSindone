@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/estiloImg.css">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="scripts/script01.js" defer></script>
+    <script src="scripts/zoomImagen.js" defer></script>
+    <link rel="stylesheet" href="css/estiloImg.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <!-- Tailwind CSS Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
     <!-- Fontawesome Link -->
@@ -16,22 +18,68 @@
 </head>
 
 <body class="bg-gray-200">
-    <nav class="flex py-5 bg-blue-500 text-white px-24">
+    <nav class="flex py-5 bg-red-400 text-white px-24">
         <div class="w-1/2 px-12 mr-auto">
-            <p class="text-2xl font-bold">CRUD</p>
+            <p class="text-2xl font-bold">La Sindone de Turin</p>
         </div>
         <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
             <li class="nav-item px-4">
-                <a href="/tasks" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">Mis
-                    Posts</a>
+                <a href="/tasks" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">
+                    Mis Posts
+                </a>
             </li>
             <li class="nav-item px-4">
-                <a href="/create" class="nav-link font-semibold border-2 border-white hover:text-blue-700
-hover:bg-white py-3 px-4 rounded-md">Crear Nuevo Post</a>
+                <a href="/historia" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">
+                    Historia
+                </a>
+            </li>
+            <li class="nav-item px-4">
+                <a href="/tienda" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">
+                    Tienda
+                </a>
+            </li>
+            <li class="nav-item px-4">
+                <a href="/contacto" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">
+                    Contacto
+                </a>
+            </li>
+            <li class="nav-item px-4">
+                <a href="#" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">
+                    Otros
+                </a>
+                <ul class="submenu">
+                    <li class="nav-item px-4">
+                        <a href="/ciencia" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">
+                            Analisis cientifico
+                        </a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a href="/autopsia" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">
+                            Autopsia
+                        </a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a href="/entierro" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">
+                            Entierro
+                        </a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a href="/reliquias" class="nav-link font-semibold hover:bg-blue-700 py-3 px-4 rounded-md">
+                            Otras reliquias y la Sindone
+                        </a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>
     {{{body}}}
+    <footer class="text-center w-full my-16">
+        <h3>Algunas ilustraciones son extraidas de libros sobre la Sindone de Turin, de parte del Centro Español de
+            Sindonologia</h3>
+        <h3>Tambien se ha ocupado para ilustrar esculturas y dibujos de Giulio Ricci, Juan Manuel Miñarro Lopez y
+            Lorenzo Ferri</h3>
+        <em>Copyright &copy; <time>2023</time> AreCodes</em>
+    </footer>
 </body>
 
 </html>

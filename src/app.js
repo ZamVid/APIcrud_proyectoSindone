@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const tasksRoutes=require('./routes/tasks');
 const app = express();
+app.use('/imagenes', express.static('imagenes'));
+app.use('/css',express.static('css'));
+app.use('/scripts',express.static('scripts'));
 app.set('puerto', 3580);
 app.use(bodyParser.urlencoded({
     extended: true
